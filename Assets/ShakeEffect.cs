@@ -6,7 +6,7 @@ public class ShakeEffect : MonoBehaviour
 {
 	public CameraShake shake;
 	public AnimationCurve amplitudeCurve;
-	public float amplitudeMultiplier = 1.0f;
+	public Vector2 amplitudeMultiplier = Vector2.one;
 	public Vector2 frequency = Vector2.zero;
 	float time = 0.0f;
 
@@ -35,7 +35,7 @@ public class ShakeEffect : MonoBehaviour
 		}
 		else
 		{
-			shake.amplitude = 0.0f;
+			shake.amplitude = Vector2.zero;
 			enabled = false;
 		}
 	}
